@@ -1,0 +1,11 @@
+commit bf248e7f0465477ca07f09006e2b63cf4872a70a (HEAD -> master)
+Author: Alex <belproof2102@gmail.com>
+Date:   Mon Feb 17 10:43:01 2020 +0300
+
+    add status.txt
+
+commit 657ef47f2ce02aecc95a7aa2d9d69781c7289589
+Author: Alex <belproof2102@gmail.com>
+Date:   Mon Feb 17 10:41:32 2020 +0300
+
+    add .gitignore
