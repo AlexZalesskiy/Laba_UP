@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "238045af-918f-4e0f-81aa-8f3e7e1c02ff",
+		"name": "goodreads",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.goodreads.com/author/show.xml?id=1244&key=BqHFqc8brfjhPlJxg12Qg",
+					"protocol": "https",
+					"host": [
+						"www",
+						"goodreads",
+						"com"
+					],
+					"path": [
+						"author",
+						"show.xml"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1244"
+						},
+						{
+							"key": "key",
+							"value": "BqHFqc8brfjhPlJxg12Qg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorbook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "group",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
