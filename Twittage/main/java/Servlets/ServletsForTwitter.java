@@ -1,3 +1,5 @@
+package Servlets;
+
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -19,11 +21,6 @@ public class ServletsForTwitter extends HttpServlet {
         response.getWriter().print((new Gson()).toJson(tweets.get(id)));
     }
 
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String id = request.getParameter("id");
-        response.setContentType("application/json");
-        response.getWriter().print((new Gson()).toJson(tweets.remove(id)));
-    }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json");
         String[] url = request.getRequestURI().split("/");
@@ -38,13 +35,24 @@ public class ServletsForTwitter extends HttpServlet {
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("application/json");
         String[] url = request.getRequestURI().split("/");
-        if(url[2].equals("add")){
+        if (url[2].equals("add")) {
             response.getWriter().print((new Gson()).toJson(tweets.add((new Gson()).fromJson(request.getReader().readLine(), Tweet.class))));
         }
-        if (url[2].equals("edit")){
+        if (url[2].equals("edit")) {
             response.getWriter().print((new Gson()).toJson(tweets.edit(request.getParameter("id"), (new Gson()).fromJson(request.getReader().readLine(), Tweet.class))));
         }
     }
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String id = request.getParameter("id");
+        response.setContentType("application/json");
+        response.getWriter().print((new Gson()).toJson(tweets.remove(id)));
+    }
+
+
+
+
+
+
 
 
 }

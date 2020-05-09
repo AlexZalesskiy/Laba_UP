@@ -4,4 +4,36 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>text</servlet-name>
+    <servlet-class>Servlets.IsRunning</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>text</servlet-name>
+    <url-pattern>/status</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>name</servlet-name>
+    <servlet-class>Servlets.GetName</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>name</servlet-name>
+    <url-pattern>/get</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>page</servlet-name>
+    <servlet-class>Servlets.GetPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>page</servlet-name>
+    <url-pattern>/page</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>post</servlet-name>
+    <servlet-class>Servlets.Post</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>post</servlet-name>
+    <url-pattern>/check</url-pattern>
+  </servlet-mapping>
 </web-app>

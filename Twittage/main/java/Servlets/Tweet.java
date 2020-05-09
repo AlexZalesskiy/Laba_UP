@@ -1,3 +1,4 @@
+package Servlets;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,14 +13,16 @@ public class Tweet {
     private ArrayList<String> likes;
 
     public Tweet() {
+        this.id="";
         this.description = "";
         this.author = "";
         this.photoLink = "";
+        this.createdAt=new Date();
         this.hashTags = new ArrayList<>();
         this.likes = new ArrayList<>();
     }
 
-    public Tweet(String id, String description, String author, String photoLink, ArrayList<String> hashTags, ArrayList<String> likes) {
+    public Tweet(String id, String description, String author,Date createdAt, String photoLink, ArrayList<String> hashTags, ArrayList<String> likes) {
         this.id = id;
         this.description = description;
         this.createdAt = new Date();
