@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href="styles.css">
+    <title> Twittage</title>
+	<script src="jsclass.js"></script>
+</head>
+<body>
+
+<header>
+    <img class="logo" src="photo/Logo.png" alt="logo">
+    <img class="profile_image" src="photo/ava.jpg" alt="profile image">
+    <div class="username"> meister_alex35 </div>
+	<div class="sitename"> Twittage </div>
+    <button class="log_out_button"> LogOut </button>
+    <button class="add_post_button"><img class="button_add_image" src="photo/plus.png" alt="add new post"> </button>
+	
+</header>
+
+
+<div class = "filter_panel">
+    <div class="filter_block_filters">
+        <div class="filter_panel_text">FILTERS</div>
+    </div>
+	<div class="filter_block_username">
+        <div class="filter_panel_text">USERNAME</div>
+        <input class="username_box" type="text" placeholder="Username">
+    </div>
+	 <div class="filter_block_tags">
+        <div class="filter_panel_text">TAGS</div>
+        <input class="tags_box" type="text" placeholder="Tags">
+    </div>
+    <div class="filter_block_data">
+        <div class="filter_panel_text">DATE</div>
+        <div class="data_text_from">FROM</div>
+        <input class="text_box1" type="text" placeholder="From:">
+		<br> </br>
+        <div class="data_text_to">TO</div>
+        <input class="text_box1" type="text" placeholder="To:">
+    </div>
+    
+   
+    <button class="apply_button">FILTER</button>
+</div>
+
+<main>
+<div class="postList" id="tweetContainer">
+        <template id="tweetTemplate">
+    <div class="post">
+	<img class="profile_image_post" src="photo/ava.jpg" alt="profile image">
+         <div class="username_post" my_data="author"></div>
+               <div class="post_data" my_data="createdAt"></div>
+                <div class="post_text" my_data="description"></div>
+                <div class="post_tags" my_data="hashTags"></div>
+              <button class="like_icon"> <img class= "like_pic" src="photo/heart.png" alt="like"> </button>
+       <button class="delete_icon">  <img class="delete_pic" src="photo/delete.png" alt="delete"> </button>
+       <button class="edit_icon"> <img class="edit_pic" src="photo/edit.png" alt="edit"> </button>
+    </div>
+	
+</template>
+ 
+	</div>
+</main>
+
+<footer>
+    <div class="footer_text">
+        <span class="footer_name">(C) Twittage, May 2020    </span>
+		<div class="footer_text2"> Alex Zalesskiy, 2 course, 6 group <br> belproof2102@gmail.com </br> </div>
+    </div>
+</footer>
+
+</body>
+</html>
